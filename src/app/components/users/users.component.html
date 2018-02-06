@@ -1,0 +1,32 @@
+<div id="container">
+   <div id="inner">
+      <div id="left">
+         <h1> List of Tracker users </h1>
+         <table class="table">
+            <tr>
+               <th>#</th>
+               <th>Email</th>
+               <th>Password</th>
+               <th>Language</th>
+               <th>Role</th>
+               <th></th>
+            </tr>
+            <tr *ngFor="let user of userList; let i = index">
+               <td>{{i + 1}}</td>
+               <td>{{user.email}}</td>
+               <td>{{user.password}}</td>
+               <td>{{user.lang}}</td>
+               <td>{{user.role}}</td>
+               <td>
+                  <button (click)="toggleEdit(user)"> Edit User </button>
+               </td>
+            </tr>
+         </table>
+      </div>
+
+      <div id="right" *ngIf=isEdit>
+         <app-user-edit (editEvent)="receiveEditMessage($event)"
+         (cancelEvent)="receiveCancelMessage($event)" [message]="message"></app-user-edit>
+      </div>
+   </div>
+</div>

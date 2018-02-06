@@ -1,0 +1,42 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+    color: black;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: darkgray; 
+    color: black; 
+}
+
+
+#container {
+    background-color: rgb(85, 139, 240);
+    color: white;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  #inner {
+    overflow: hidden;
+    width: 100%;
+    padding: 8px;
+  }
+  
+  #right {
+    float: right;
+    width: 25%;
+  }
+
+  #left {
+    float: left;
+    width: 100%;
+  }

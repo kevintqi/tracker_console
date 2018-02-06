@@ -1,0 +1,29 @@
+<div class="parent">
+   <h1>Edit User</h1>
+   <form>
+      <div>
+         <label for="email">Email: </label>
+         <br>
+         <input type="text" [(ngModel)]="message.email" name="message.email">
+      </div>
+      <div>
+         <label for="password">Password: </label>
+         <br>
+         <input type="text" [(ngModel)]="message.password" name="message.password">
+      </div>
+      <div>
+         <label for="lang">Language: </label>
+         <br>
+         <input type="text" [(ngModel)]="message.lang" name="message.lang">
+      </div>
+      <div>
+         <label for="role">Role: </label>
+         <br>
+         <input type="text" [(ngModel)]="message.role" name="message.role">
+      </div>
+
+   </form>
+   <br>
+   <button (click)="sendEditMessage()">Update</button>
+   <button (click)="sendCancelMessage()">Cancel</button>
+</div>
